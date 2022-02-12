@@ -1,5 +1,6 @@
 .container{
     padding: 3em;
+    margin-top: 1em;
     border: 3px solid black;
     background-color: rgb(250, 245, 245);
 } 
@@ -29,7 +30,7 @@
  }
 
  select{
-    width: 250px;
+    width: 300px;
     height: 35px;
     background-color: white;
     border-radius: 20px;
