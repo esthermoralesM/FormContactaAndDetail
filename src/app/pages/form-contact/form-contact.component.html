@@ -1,0 +1,210 @@
+<div class="container">
+
+    <h1>Formulario de contacto</h1>
+ 
+    <form #anyadirContactForm="ngForm" (ngSubmit)="onSubmit(anyadirContactForm)" class="estrucForm">  
+        <div class="row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="formato" name="nombre" id="nombre" placeholder="Nombre" [(ngModel)]="usuario.nombre" #nombre="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && nombre.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && nombre.invalid">
+                      <p *ngIf="nombre.errors?.['required']">Introduce un nombre</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" class="formato" name="apellidos" id="apellidos" placeholder="Apellidos" [(ngModel)]="usuario.apellidos" #apellidos="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && apellidos.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && apellidos.invalid">
+                      <p *ngIf="apellidos.errors?.['required']">Introduce los apellidos</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input type="text" class="formato" name="dni" id="dni" placeholder="DNI" [(ngModel)]="usuario.dni" #dni="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && apellidos.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && apellidos.invalid">
+                      <p *ngIf="apellidos.errors?.['required']">Introduce los apellidos</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label>Género</label><br>
+                  <select name="genero" [(ngModel)]="usuario.genero" #genero="ngModel"
+                  [ngClass]="{'is-invalid': anyadirContactForm.submitted && genero.invalid}" required>
+                      <option disabled selected>Selecciona género</option>
+                      <option value="hombre">Hombre</option>
+                      <option value="mujer">Mujer</option>
+                      <option value="otros">Otros</option>
+                    </select>
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && genero.invalid">
+                      <p *ngIf="genero.errors?.['required']">Selecciona género</p>
+                  </div>
+              </div>
+            </div> 
+
+              <div class="col">
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" class="formato" name="telefono" id="telefono" placeholder="Teléfono" [(ngModel)]="usuario.telefono" #telefono="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && telefono.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && telefono.invalid">
+                      <p *ngIf="telefono.errors?.['required']">Introduce un teléfono</p>
+                  </div>
+                </div>
+              </div>
+       
+            <div class="col">
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="formato" name="email" id="email" placeholder="E-mail" [(ngModel)]="usuario.email" #email="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && email.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && email.invalid">
+                      <p *ngIf="email.errors?.['required']">Introduce un email</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                    <label for="calle">Calle</label>
+                    <input type="text" class="formato" name="calle" id="calle" placeholder="Calle" [(ngModel)]="usuario.calle" #calle="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && calle.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && calle.invalid">
+                      <p *ngIf="calle.errors?.['required']">Introduce tu calle</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                    <label for="numero">Número</label>
+                    <input type="number" class="formato" name="numero" id="numero" placeholder="Número" [(ngModel)]="usuario.numero" #numero="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && numero.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && numero.invalid">
+                      <p *ngIf="numero.errors?.['required']">Introduce el numero de la calle</p>
+                  </div>
+                </div>
+              </div>
+      
+            <div class="col">
+                <div class="form-group">
+                    <label for="text">Piso</label>
+                    <input type="text" class="formato" name="piso" id="piso" placeholder="Piso" [(ngModel)]="usuario.piso" #piso="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && piso.invalid}">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                    <label for="puerta">Puerta</label>
+                    <input type="text" class="formato" name="puerta" id="puerta" placeholder="Puerta" [(ngModel)]="usuario.puerta" #puerta="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && puerta.invalid}">
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                    <label for="localidad">Localidad</label>
+                    <input type="text" class="formato" name="localidad" id="localidad" placeholder="Localidad" [(ngModel)]="usuario.localidad" #localidad="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && localidad.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && localidad.invalid">
+                      <p *ngIf="localidad.errors?.['required']">Introduce la localidad</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="form-group">
+                    <label for="codPostal">Código Postal</label>
+                    <input type="number" class="formato" name="codPostal" id="codPostal" placeholder="Código Postal" [(ngModel)]="usuario.codPostal" #codPostal="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && codPostal.invalid}" required minlength="5">
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && codPostal.invalid">
+                      <p *ngIf="codPostal.errors?.['required']">Introduce tu código postal</p>
+                      <p *ngIf="codPostal.errors?.['minlength']">El código postal debe contener 5 números</p>
+                  </div>
+                </div>
+              </div>
+             </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="form-group">
+                <label for="provincia">Provincia</label>
+                <input type="text" class="formato" name="provincia" id="provincia" placeholder="Provincia" [(ngModel)]="usuario.provincia" #provincia="ngModel"
+                [ngClass]="{'is-invalid': anyadirContactForm.submitted && provincia.invalid}" required>
+                <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && provincia.invalid">
+                  <p *ngIf="provincia.errors?.['required']">Introduce tu provincia</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="form-group">
+                <label for="pais">País</label>
+                <input type="text" class="formato" name="pais" id="pais" placeholder="País" [(ngModel)]="usuario.pais" #pais="ngModel"
+                [ngClass]="{'is-invalid': anyadirContactForm.submitted && pais.invalid}" required>
+                <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && pais.invalid">
+                  <p *ngIf="pais.errors?.['required']">Introduce tu país</p>
+              </div>
+            </div>
+          </div>
+          
+            <div class="col">
+                <div class="form-group">
+                    <label for="estudios">Estudios</label>
+                    <input type="text" class="formato" name="estudios" id="estudios" placeholder="Estudios" [(ngModel)]="usuario.estudios" #estudios="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && estudios.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && estudios.invalid">
+                      <p *ngIf="estudios.errors?.['required']">Introduce tus estudios</p>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <div class="row">
+              <div class="col-8">
+                <div class="form-group">
+                    <label for="profesion">Profesión</label>
+                    <input type="text" class="formato" name="profesion" id="profesion" placeholder="Profesión" [(ngModel)]="usuario.profesion" #profesion="ngModel"
+                    [ngClass]="{'is-invalid': anyadirContactForm.submitted && profesion.invalid}" required>
+                    <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && profesion.invalid">
+                      <p *ngIf="profesion.errors?.['required']">Introduce tu profesión</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+     
+           <div class="row">
+              <div class="col">
+                <label for="descripcion">Descripción</label>
+                <textarea class="form-control" name="descripcion" id="descripcion" [(ngModel)]="usuario.descripcion" #descripcion="ngModel" placeholder="Descripción"
+                [ngClass]="{'is-invalid': anyadirContactForm.submitted && descripcion.invalid}" required> </textarea>
+                <div class="invalid-feedback" *ngIf="anyadirContactForm.submitted && descripcion.invalid">
+                  <p *ngIf="descripcion.errors?.['required']">La descripción es obligatoria</p>
+                  </div>
+          </div>
+          </div>
+    
+        <div class="boton">
+          <button class="btn-enviar">Añadir</button>
+        </div>
+    
+    </form>
+</div>

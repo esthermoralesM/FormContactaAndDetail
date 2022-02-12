@@ -1,0 +1,93 @@
+.container{
+    padding: 3em;
+    border: 3px solid black;
+    background-color: rgb(250, 245, 245);
+} 
+
+.form-group{
+    width: 250px;
+ }
+
+ .row{
+     margin-bottom: 1vw;
+ }
+
+ h1{
+     margin-bottom: 3vw;
+     text-align: center;
+     font-style: italic;
+     font-family:cursive, "Arial Black", "Arial";
+     font-size: 3rem;
+     color:darkslategray;
+ }
+
+ .formato{
+     border-radius: 20px;
+     border: 1px solid rgb(128, 124, 124);
+     padding: 5px;
+     width: 300px;
+ }
+
+ select{
+    width: 250px;
+    height: 35px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+ label{
+     margin-bottom: 2px;
+ }
+
+ textarea{
+    height: 150px;
+    border-radius: 20px;
+    margin-bottom: 1vw;
+ }
+
+.boton{
+    display: flex;
+    justify-content: center;
+}
+.btn-enviar{
+    width: 10vw;
+    border-radius: 20px;
+    padding: 5px;  
+    color: white;
+    background-color: #5EC0CA; 
+}
+
+
+.btn-enviar:hover{
+    background-color: rgb(21, 8, 82);
+}
+
+.genero{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;  
+    margin-bottom: 1em;
+}
+
+.genero input{
+    margin-right: 0.3em;
+}
+
+
+@media all and (max-width: 926px){ 
+
+    .btn-enviar{
+       width: 100px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+}
+
+@media all and (max-width: 456px){ 
+
+    h1{
+        font-size: 2rem;
+    }
+}
